@@ -38,6 +38,7 @@ header {
   letter-spacing: 2px;
   font-size: 0.875rem;
   transition: font-size 200ms;
+  text-align: center;
 }
 
 .card {
@@ -52,7 +53,7 @@ header {
   flex-direction: column;
   row-gap: 1.5rem;
   box-shadow: 8px 8px hsl(0, 0%, 0%);
-  transition: width 200ms, height 200ms;
+  transition: width 200ms, height 200ms, transform 200ms;
 }
 
 .card__img {
@@ -136,6 +137,12 @@ header {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (width < 375px) {
+  .card {
+    transform: scale(0.8);
+  }
 }
 
 @media (width >= 1024px) {
